@@ -1,4 +1,12 @@
-<div>
-  <h1>Мнемосхема стелажей</h1>
-  <app-shelf [numOfShelves]="numOfShelves" [numOfRows]="numOfRows" [numOfCells]="numOfCells"></app-shelf>
+<div class="rows">
+  <div class="row" *ngFor="let row of rows">
+    <h1>Стеллаж {{ row }}</h1>
+    <div class="shelf" *ngFor="let shelf of shelves">
+        <h2>Полка {{ shelf }}</h2>
+        <div *ngFor="let cell of cells">
+        <app-cell class="cell" [shelf]="shelf" [row]="row" [cell]="cell"></app-cell>
+        </div>
+    </div>
+  </div>
 </div>
+

@@ -1,9 +1,0 @@
-<div *ngFor="let shelf of shelves">
-    <h3>Стеллаж {{ shelf }}</h3>
-    <div *ngFor="let row of rows">
-        <h4>Полка {{ row }}</h4>
-        <div *ngFor="let cell of cells">
-        <app-cell [shelf]="shelf" [row]="row" [cell]="cell"></app-cell>
-        </div>
-    </div>
-</div>

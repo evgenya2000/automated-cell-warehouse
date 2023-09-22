@@ -6,19 +6,20 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./cell.component.css']
 })
 export class CellComponent {
-  @Input() shelf: number = 0;
-  @Input() row: number = 0;
-  @Input() cell: number = 0;
+  @Input() row: number | undefined;;
+  @Input() shelf: number | undefined;
+  @Input() cell: number | undefined;;
 
   productList: string[] = [];
   showProductList = false;
 
+  // Метод при отображении товаров
   showProducts() {
-    // Ваша логика для отображения списка товаров в ячейке
-    this.productList = ['Товар 1', 'Товар 2', 'Товар 3'];
+    this.productList = ['Товар рпопопрпррпаиваиваива', 'Товар 2', 'Товар 3'];
     this.showProductList = true;
   }
 
+  // Метод при скрытии товаров
   hideProducts() {
     this.showProductList = false;
   }

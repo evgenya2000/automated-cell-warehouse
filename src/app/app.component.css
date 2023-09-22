@@ -1,0 +1,28 @@
+.rows {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.row {
+    margin: 2%;
+    border: solid none;
+    border-radius: 12px;
+    padding: 1%;
+    text-align: center;
+    background-color: #AAD0EC;
+    width: 20%;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
+}
+
+.shelf {
+    background-color: #d3eafa;
+    border-radius: 12px;
+    margin: 5%;
+    padding: 5%;
+}
+
+
+

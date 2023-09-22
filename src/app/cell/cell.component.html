@@ -1,5 +1,5 @@
-<div (mouseover)="showProducts()" (mouseleave)="hideProducts()">
-    <h5>Ячейка {{ shelf }}.{{ row }}.{{ cell }}</h5>
+<div class="cell" (mouseover)="showProducts()" (mouseleave)="hideProducts()">
+    <h3>Ячейка {{ cell }}</h3>
     <ul *ngIf="showProductList">
       <li *ngFor="let product of productList">{{ product }}</li>
     </ul>
