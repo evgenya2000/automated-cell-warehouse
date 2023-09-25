@@ -1,12 +1,27 @@
-<div class="rows">
+<form (ngSubmit)="renderRows()">
+  <div class="label">
+    <p>Количество стеллажей:</p>
+    <input type="number" name="numOfRows" [(ngModel)]="numOfRows">
+  </div>
+  <div class="label">
+    <p>Количество полок:</p>
+    <input type="number" name="numOfShelves" [(ngModel)]="numOfShelves">
+  </div>
+  <div class="label">
+    <p>Количество ячеек:</p>
+    <input type="number" name="numOfCells" [(ngModel)]="numOfCells">
+  </div>
+  <button type="submit">Отрисовать</button>
+</form>
+
+<div class="rows" *ngIf="rows && shelves && cells">
   <div class="row" *ngFor="let row of rows">
     <h1>Стеллаж {{ row }}</h1>
     <div class="shelf" *ngFor="let shelf of shelves">
-        <h2>Полка {{ shelf }}</h2>
-        <div *ngFor="let cell of cells">
+      <h2>Полка {{ shelf }}</h2>
+      <div *ngFor="let cell of cells">
         <app-cell class="cell" [shelf]="shelf" [row]="row" [cell]="cell"></app-cell>
-        </div>
+      </div>
     </div>
   </div>
 </div>
-

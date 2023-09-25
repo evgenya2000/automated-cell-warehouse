@@ -1,7 +1,6 @@
 <div class="cell" (mouseover)="showProducts()" (mouseleave)="hideProducts()">
-    <h3>Ячейка {{ cell }}</h3>
-    <ul *ngIf="showProductList">
-      <li *ngFor="let product of productList">{{ product }}</li>
-    </ul>
+  <h3>Ячейка {{ cell }}</h3>
+  <ul [ngClass]="{'show-hide-animation': true, 'show': showProductList}">
+    <li *ngFor="let product of productList">{{ product }}</li>
+  </ul>
 </div>
-  
